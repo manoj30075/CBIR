@@ -7,6 +7,12 @@ folder_path_dict = {
     'vgg16': '/Users/manojreddy/My Repos/Github/CBIR/features/vgg16'
 }
 
+folder_path_dict_ubuntu = {
+    'hog': '/home/ubuntu/CBIR/features/hog',
+    'rgb': '/home/ubuntu/CBIR/features/rgb',
+    'vgg16': '/home/ubuntu/CBIR/features/vgg16'
+}
+
 
 def create_dir(folder_path):
     """
@@ -22,7 +28,7 @@ class Cache:
     """
 
     def __init__(self, feature_type):
-        self.folder_path = folder_path_dict[feature_type]
+        self.folder_path = folder_path_dict_ubuntu[feature_type]
         create_dir(self.folder_path)
 
     def cache(self, features, image_name):
